@@ -5,21 +5,19 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm'; 
 import { FormModule } from './form/form.module';
 
-const ormOptions: TypeOrmModuleOptions = {
-  type: 'mysql',
-  host: "10.102.32.196",
-  port: 3306,
-  username: 'development',
-  password: 'Admin@123',
-  database: 'nest_assesment_sunny',
-  autoLoadEntities: true,
-  synchronize: true,
-}
-
 @Module({
   imports: [
     ConfigModule.forRoot({isGlobal:true}),
-    TypeOrmModule.forRoot(ormOptions),
+    TypeOrmModule.forRoot({
+      type: 'mysql',
+      host: process.env.DB_HOST,
+      port: 3306,
+      username: process.env.DB_USERNAME,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_NAME,
+      autoLoadEntities: true,
+      synchronize: true,
+    }),
     FormModule,
   ],
   controllers: [AppController],
