@@ -5,26 +5,24 @@
 - Create a route to create form
   - route POST -/form
   - body
-  ```{
+  ```
     "uniqueId": "uuid",
     "title": "User",
     "name": "string",
     "email": "email",
     "phonenumber": "number",
     "isGraduate": "boolean"
-    }
   ```
 
 -	Create a route to fill data
   - route POST - fill_data?form_title="user"
   - body
-```{
+```
     "uniqueId": "21d44798-933b-43ea-8568-ca374e74ea53",
     "name": "user name 3",
     "email": "test3@test.com",
     "phonenumber": "+919876543213",
     "isGraduate": true
-  }
   ```
 
 -	validate for the request that every key is as per the type defined in the create form api.
