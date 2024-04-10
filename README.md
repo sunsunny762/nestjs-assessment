@@ -40,13 +40,13 @@ Application based on [Nest](https://github.com/nestjs/nest) framework
 To clone the repo, run the below command
 
 ```bash
-$ git clone https://gitlab.com/FLYdocs-Dev/nodejs/api.git
+$ git clone https://github.com/sunsunny762/nestjs-assessment.git
 ```
 
 If you are using SSH, use the below command
 
 ```bash
-$ git clone git@gitlab.com:FLYdocs-Dev/nodejs/api.git
+$ git clone git@github.com:sunsunny762/nestjs-assessment.git
 ```
 
 Navigate inside the repo and install the dependencies
